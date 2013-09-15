@@ -46,6 +46,10 @@ p {
 	text-align: center;
 }
 
+.small {
+	display: none !important;
+}
+
 .header {
 	padding: 30px 0px;
 }
