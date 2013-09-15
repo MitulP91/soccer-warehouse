@@ -1,0 +1,26 @@
+<div class="wrapper">
+	<!-- Menu Options -->
+	<div class="columns fourteen">
+		<ul class="link-list">
+			<li class="link admin"><a href="/teams/new">ADD A TEAM</a></li>
+		</ul>
+	</div>
+	<!-- End Menu Options -->
+	<!-- Display Team Details -->
+	<div class="columns fourteen">
+		<ul>
+			<% @nav_teams.each do |team| %>
+				<li class="team-name mob"><i class="icon-angle-right">&nbsp;</i><a href="/teams/<%= team.id %>"><%= team.name %></a><strong class="bolder">&nbsp;:&nbsp;</strong></li>
+				<li class="mob-clear"></li>
+				<li class="player-count mob">This team has <%=team.soccer_players.count %> player(s)</li>
+				<li class="mob-clear"></li>
+				<li class="view mob"><a href="/teams/<%= team.id %>">SEE MORE DETAILS</a></li>
+				<li class="mob-clear"></li>
+				<li class="team-country mob"><%= team.country %></li>
+				<hr/>
+				<div class="row"></div>
+			<% end %>
+		</ul>
+	</div>
+	<!-- End Display Team Details -->
+</div>

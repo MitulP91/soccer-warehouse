@@ -1,0 +1,22 @@
+<div class="header"></div>
+<!-- Create New Player -->
+<div class="columns fourteen">
+	<form action="/teams/<%= @team_id %>/new_player" method="post">
+		<div class="columns four offset-by-five">
+			<div>
+				<label for="name">Enter the Player's Name: </label>
+				<input type="text" name="player[name]" autofocus />
+			</div>
+			<div>
+				<label for="age">Enter the Player's Age: </label>
+				<input type="text" name="player[age]" />
+			</div>
+			<div>
+				<label for="nationality">Enter the Player's Country: </label>
+				<input type="text" name="player[nationality]" />
+			</div>
+			<input type="submit" value="Add the Player!" />
+		</div>
+	</form>
+</div>
+<!-- End Create New Player -->

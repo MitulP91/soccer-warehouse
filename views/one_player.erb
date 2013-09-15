@@ -1,0 +1,24 @@
+<!-- Display Single Player -->
+<div class="wrapper">
+	<!-- Menu Options -->
+	<div class="columns fourteen">
+		<ul class="link-list">
+			<li class="link admin"><a href="/teams/<%= @team_id %>/<%= @player.id %>/edit">EDIT THIS PLAYER</a></li>
+			<li class="link admin"><a href="/teams/<%= @team_id %>/<%= @player.id %>/delete">DELETE THIS PLAYER</a></li>
+		</ul>
+	</div>
+	<!-- End Menu Options -->
+	<!-- Display Player Information -->
+	<div class="columns fourteen">
+		<ul>
+			<li class="display-team"><%= @player.name %></li>
+		</ul>
+		<div class="row"></div>
+		<ul>
+			<li class="player-left"><%= @player.age %> years old</li>
+			<li class="player-left"><%= @player.nationality %></li>
+		</ul>
+	</div>
+	<!-- End Display Player Information -->
+</div>
+<!-- End Display Single Player -->

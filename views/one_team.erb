@@ -1,0 +1,33 @@
+<div class="wrapper">
+	<div class="columns fourteen">
+		<ul class="link-list">
+			<li class="link admin"><a href="/teams/<%= @team.id %>/new_player">ADD A PLAYER</a></li>
+			<li class="link admin"><a href="/teams/<%= @team.id %>/edit">EDIT THIS TEAM</a></li>
+			<li class="link admin"><a href="/teams/<%= @team.id %>/delete">DELETE THIS TEAM</a></li>
+		</ul>
+	</div>
+	<div class="columns fourteen">
+		<ul>
+			<li class="display-team"><%= @team.name %></li>
+			<li class="display-team">&nbsp;&nbsp;(<%= @team.country %>)</li>
+		</ul>
+	</div>
+
+	<div class="row"></div>
+
+	<div class="columns fourteen">
+		<h3 class="player-count">Players: </h3>
+	</div>
+
+	<div class="columns fourteen">
+		<% @team.soccer_players.each do |player| %>
+			<ul>
+				<li class="player-left"><i class="icon-angle-right" id="diff">&nbsp;</i><a href="/teams/<%= @team.id %>/<%= player.id %>"><%= player.name %></a></li>
+				<li class="player-left"><%= player.age %> years old</li>
+				<li class="player-left"><%= player.nationality %></li>
+				<li class="player-left border"><a href="/teams/<%= @team.id %>/<%= player.id %>">SEE MORE DETAILS</a></li>
+			</ul>
+			<hr>
+		<% end %>
+	</div>
+</div>

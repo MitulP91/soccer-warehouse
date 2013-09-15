@@ -1,0 +1,13 @@
+- Soccer Teams
+	- id ~ serial primary key
+	- name ~ varchar(100) NOT NULL
+	- country ~ varchar(50) NOT NULL
+	- num_league_trophies ~ integer
+
+- Soccer Players
+	- id ~ serial primary key
+	- name ~ varchar(100) NOT NULL
+	- age ~ integer NOT NULL
+	- current_team ~ varchar(100) NOT NULL
+	- nationality ~ varchar(100) NOT NULL
+	- past_teams ~ text

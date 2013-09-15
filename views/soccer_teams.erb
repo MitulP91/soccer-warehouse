@@ -1,0 +1,20 @@
+<% @nav_teams.each do |team| %>
+	<div class="container">
+		<h3><%= team.name %></h3>
+		<h4><%= team.country %></h4>
+		<h3>Players: </h3>
+		<div class="players">
+		<% team.soccer_players.each do |player| %>
+			<div>
+				<%= player.name %>
+			</div>
+			<div>
+				<%= player.age %>
+			</div>
+			<div>
+				<%= player.nationality %>
+			</div>
+		<% end %>
+		</div>
+	</div>
+<% end %>

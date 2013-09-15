@@ -1,0 +1,19 @@
+<div class="header"></div>
+<!-- Edit Team Information -->
+<div class="columns fourteen">
+	<form action="/teams/<%= @team.id %>/edit" method="post">
+		<div class="columns four offset-by-five">
+			<div>
+				<label for="name">Enter the Team's Name: </label>
+				<input type="text" name="name" value="<%= @team.name %>" autofocus />
+			</div>
+			<div>
+				<label for="country">Enter the Team's Country: </label>
+				<input type="text" name="country" value="<%= @team.country %>"/>
+			</div>
+		</div>
+		<div class="row"></div>
+		<input type="submit" value="Edit the Team!" />
+	</form>
+</div>
+<!-- End Edit Team Information -->

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Adds Tab Title and Browser Icon -->
+	<title>Soccer Teams and Players</title>
+	<link rel="shortcut icon" href="/images/favicon.ico">
+
+	<!-- Adds Local CSS Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="/stylesheets/skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/base.css" />
+
+	<% if $user.present? %>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/admin.css" />
+	<% else %>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
+	<% end %>
+
+	<link rel="stylesheet" type="text/css" href="/stylesheets/layout.css" />
+
+	<!-- Adds Remote CSS Stylesheets -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" type="text/css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Cabin:500' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<!-- Header -->
+	<header class="container">
+		<div class="columns fifteen offset-by-one header">
+			<div class="columns fourteen">
+				<a href="/"><h1>SOCCER WAREHOUSE</h1></a>
+				<h3 class="marck">for all your soccer knowledge.</h3>
+				<a href="/login">LOGIN</a> &nbsp;|&nbsp; <a href="/logout">LOGOUT</a>
+			</div>
+		</div>
+	</header>
+	<!-- End Header -->
+	<!-- Main Content -->
+	<div class="container shadow">
+		<div class="columns fifteen offset-by-one background scroll">
+			<%= yield %>
+		</div>
+	</div>
+	<!-- End Main Content -->
+	<!-- Footer -->
+	<footer class="container">
+		<div class="outside-list columns fifteen offset-by-one">
+			<ul class="columns fourteen">
+				<li class="link mob-link"><a class="blue" href="/">HOME</a></li>
+				<li class="link mob-link admin"><a class="blue" href="/teams/new">ADD A TEAM</a></li>
+			</ul>
+		</div>
+	</footer>
+	<!-- End Footer -->
+</body>
+</html>
