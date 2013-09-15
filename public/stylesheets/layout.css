@@ -58,6 +58,10 @@
 		.mob-link {
 			margin: 0;
 		}
+
+		.mob-link2 {
+			clear: both;
+		}
 	}
 
 
