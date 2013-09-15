@@ -46,7 +46,7 @@ p {
 }
 
 .small {
-	display: none;
+	display: none !important;
 }
 
 .container {
