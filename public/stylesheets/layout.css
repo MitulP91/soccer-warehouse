@@ -59,8 +59,8 @@
 			margin: 0;
 		}
 
-		.mob-link2 {
-			clear: both;
+		.small {
+			display: block !important;
 		}
 	}
 

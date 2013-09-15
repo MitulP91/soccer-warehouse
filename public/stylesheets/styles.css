@@ -45,6 +45,10 @@ p {
 	display: none !important;
 }
 
+.small {
+	display: none;
+}
+
 .container {
 	font-family: 'Cabin', 'Helvetica', sans-serif;
 	text-align: center;
