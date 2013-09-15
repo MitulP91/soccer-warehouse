@@ -9,13 +9,7 @@ require 'digest/sha2'
 enable :sessions
 
 ### Establish ActiveRecord Connection to DB ###
-ActiveRecord::Base.establish_connection(
-	:adapter => "postgresql",
-	:host => "localhost",
-	:username => "mitulpatel",
-	:password => "",
-	:database => "HEROKU_POSTGRESQL_WHITE_URL"
-)
+ActiveRecord::Base.establish_connection(ENV['HEROKU_POSTGRESQL_WHITE_URL'] || 'postgres://localhost/dogs_and_toys')
 
 ### Output ActiveRecord SQL Statements to Terminal ###
 ActiveRecord::Base.logger = Logger.new(STDOUT)
