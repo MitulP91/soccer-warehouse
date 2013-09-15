@@ -2,6 +2,7 @@
 require 'sinatra'
 require 'active_support/all'
 require 'active_record'
+require 'pg'
 require 'digest/sha2'
 
 # Enable the use of sessions
