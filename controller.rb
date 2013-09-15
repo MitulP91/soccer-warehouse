@@ -14,7 +14,7 @@ ActiveRecord::Base.establish_connection(
 	:host => "localhost",
 	:username => "mitulpatel",
 	:password => "",
-	:database => "soccer_teams_and_players"
+	:database => "HEROKU_POSTGRESQL_WHITE_URL"
 )
 
 ### Output ActiveRecord SQL Statements to Terminal ###
