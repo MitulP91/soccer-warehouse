@@ -23,17 +23,18 @@ require_relative './models/user.rb'
 before do 
 	# SELECT * FROM soccer_teams;
 	@nav_teams = SoccerTeam.order("name").all
+	@user = session[:user]
 end
 
 ### Non-Admin User Catch ###
 before '*/edit' do
-	if $user == nil
+	if session[:user] == nil
 		redirect '/login'
 	end
 end
 
 before '*/new' do
-	if $user == nil
+	if session[:user] == nil
 		redirect '/login'
 	end
 end
@@ -54,7 +55,6 @@ post '/login' do
 
   if user = User.find(:first, :conditions => {:username => username, :password => password})
     session[:user] = username
-    $user = session[:user]
     redirect '/'
   else
     erb :login
@@ -64,7 +64,6 @@ end
 ### Logout Page ###
 get '/logout' do
 	session[:user] = nil
-	$user = nil
 	redirect '/'
 end
 
